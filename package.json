@@ -1,7 +1,7 @@
 {
-  "name": "vanilla-typecript-project",
+  "name": "doodle",
   "version": "1.0.0",
-  "description": "A template for building html,css and typescript web apps",
+  "description": "A game made with typescript",
   "main": "src/index.ts",
   "scripts": {
     "start": "webpack --watch",
@@ -34,7 +34,7 @@
     "prettier": "^2.3.2",
     "ts-jest": "^27.0.5"
   },
-   "jest": {
+  "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
     },

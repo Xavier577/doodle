@@ -3,42 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="description" content="This is a vanilla Typescript-template" />
+    <meta name="description" content="This is a game made with typescript" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="game doodle-game doodle typescript-doodle typescript-game vanilla-typescript">
     <meta name="theme-color" content="#000000" />
-    <title>Typescript App</title>
-    <link rel="icon" href="./assets/logo.svg" />
+    <title>mydoodle</title>
+    <link rel="icon" href="./assets/img/doodler.png" />
     <link rel="stylesheet" href="./static/css/style.css" />
     <script src="./static/bundle/script.js" defer></script>
   </head>
   <body>
-    <header class="header">
-      <div>
-        <img src="./assets/logo-white577.svg" alt="typescript-icon" />
-      </div>
-      <span class="hero-text">Make websites with typescript</span>
-    </header>
-    <section class="middle-section flex-center">
-      <span class="flex middle-section-text">
-        check out the github repo for this template
-        <a
-          href="https://github.com/Xavier577/vanilla-typescript-project.git"
-          target="_blank"
-          ><img src="./assets/github-white.svg" alt=""
-        /></a>
-      </span>
-    </section>
-    <section class="end-section">
-      <div class="learn-ts-container">
-        <div class="counter-example flex flex-center">
-          Count: <span id="count-value">0</span
-          ><button id="increment">+</button> <button id="decrement">-</button>
-        </div>
-        <span class="learn-ts-text"> New to Typescript? </span>
-        <a href="https://www.typescriptlang.org/" target="_blank">
-          <button class="get-started-btn">Get started</button></a
-        >
-      </div>
-    </section>
+    <main id="app" class="app">
+			<!-- <button class="back-btn" disabled>&LeftArrow;</button>
+			<button class="quick-help-btn">?</button>
+			<button class="pause-btn">&#9612;&#9612;</button>
+			<div id="game-options" class="game-options">
+				<button id="start-btn" class="start-btn">Start</button>
+				<button id="level-btn" class="level-btn">Level</button>
+				<button id="highscore-btn" class="highscore-btn"> Highscore</button>
+				<button id="help-btn" class="help-btn">Help</button>
+			</div>
+ -->		
+        <img src="./assets/img/doodler.png" class="doodler" id="doodler" alt="player">
   </body>
 </html>
