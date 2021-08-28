@@ -43,9 +43,9 @@ export default class Game {
   public run() {
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
     // rember to change the thrid (optional) argument to 0.02 after developing
-    Grid(this.screen).draw(this.gridColor);
-    this.renderPlayer();
+    Grid(this.screen).draw(this.gridColor, 0.02);
     this.drawPlatform();
+    this.renderPlayer();
     // this.movePlatform();
     const recursiveGameRender = requestAnimationFrame(this.run);
 
@@ -56,7 +56,13 @@ export default class Game {
 
   public drawPlatform() {
     this.createPlatform();
-    this.platforms.forEach((platform) => platform.draw(this.screen));
+    this.platforms.forEach((platform) => {
+      platform.draw(this.screen);
+      const onPlatform = platform.isPlayerOnPlatform(this.player);
+      if (onPlatform) {
+        this.player.dy *= -1;
+      }
+    });
   }
 
   public movePlatform() {

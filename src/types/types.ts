@@ -19,5 +19,6 @@ export interface Player {
   dx: number;
   dy: number;
   avatar: HTMLImageElement;
+  isJumping: () => boolean;
   draw: ({ ctx }: GameScreen) => void;
 }

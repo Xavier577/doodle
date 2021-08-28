@@ -29,17 +29,20 @@ export default class Platform extends GenericComponent {
   }
 
   isPlayerOnPlatform(player: Player) {
-    const platformLeft = this.x;
-    const platformRight = this.x + this.width;
+    const playerX = player.x;
+    const playerY = player.y;
+    const platformX = this.x;
     const platformY = this.y;
-    const playerY = player.y + player.height;
-    const playerLeft = player.x + this.width;
-    const playerRight = player.x + this.width;
+    const platformEdgeX = platformX + this.width;
+    const platformEdgeY = platformY + this.height;
+    const playerEdgeX = playerX + player.width;
+    const playerEdgeY = playerY + player.height;
 
     return (
-      platformLeft <= playerLeft &&
-      platformRight >= playerRight &&
-      platformY === playerY
+      platformX < playerX &&
+      platformEdgeX > playerEdgeX &&
+      playerEdgeY > player.y &&
+      !player.isJumping()
     );
   }
 }
