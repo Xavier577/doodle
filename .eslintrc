@@ -14,11 +14,17 @@
     "project": "./tsconfig.json"
   },
   "rules": {
+    "@typescript-eslint/lines-between-class-members": [
+      "warn",
+      "always",
+      { "exceptAfterOverload": false }
+    ],
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-unused-vars": "warn",
     "class-methods-use-this": "off",
     "func-names": "off",
     "import/prefer-default-export": "warn",
+    "lines-between-class-members": "off",
     "no-console": "warn",
     "no-duplicate-imports": "error",
     "no-unused-vars": "warn",
